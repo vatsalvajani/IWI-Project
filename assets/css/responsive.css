@@ -215,6 +215,92 @@
     .section-header{
         margin-bottom: 35px;
     }
+
+    .section-title{
+        font-size: 32px;
+    }
+
+    .cmn-lft-style{
+        padding-left: 22px;
+    }
+
+    .cmn-lft-style:before{
+        width: 10px;
+    }
+
+    .cmn-link-btn{
+        font-size: 20px;
+        column-gap: 12px;
+    }
+
+    .event-title{
+        font-size: 22px;
+    }
+
+    .event-date{
+        font-size: 16px;
+    }
+
+    .event-country{
+        font-size: 18px;
+    }
+
+    .upcoming-events-section {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .upcomin-event-slider.owl-carousel .owl-nav .owl-prev,
+    .upcomin-event-slider.owl-carousel .owl-nav .owl-next{
+        width: 18px;
+        height: 32px;
+        margin-top: -36px;
+    }
+
+    .upcomin-event-slider.owl-carousel .owl-nav .owl-prev{
+        left: -36px;
+    }
+
+    .upcomin-event-slider.owl-carousel .owl-nav .owl-next{
+        right: -36px;
+    }
+
+    .main-section-title{
+        font-size: 44px;
+    }
+
+    .about-info-sec{
+        font-size: 22px;
+        max-width: 80%;
+    }
+
+    .main-section-header{
+        row-gap: 70px;
+        padding: 35px 0 20px;
+    }
+
+    .categories-wrpper{
+        padding: 70px 0;
+    }
+
+    .btm-style:before{
+        width: 75px;
+        height: 6px;
+        bottom: -38px;
+    }
+
+    .categories-wrpper{
+        row-gap: 75px;
+    }
+
+    .top-category-section,
+    .bottom-category-section{
+        gap: 30px;
+    }
+
+    .category-name{
+        font-size: 26px;
+    }
 }
 
 @media (min-width: 1601px){
@@ -345,6 +431,87 @@
     .section-header{
         margin-bottom: 40px;
     }
+
+    .section-title{
+        font-size: 40px;
+    }
+
+    .cmn-lft-style{
+        padding-left: 26px;
+    }
+
+    .cmn-lft-style:before{
+        width: 14px;
+    }
+
+    .cmn-link-btn{
+        font-size: 22px;
+        column-gap: 15px;
+    }
+
+    .event-title{
+        font-size: 26px;
+    }
+
+    .event-date{
+        font-size: 20px;
+    }
+
+    .event-country{
+        font-size: 22px;
+    }
+
+    .upcomin-event-slider.owl-carousel .owl-nav .owl-prev,
+    .upcomin-event-slider.owl-carousel .owl-nav .owl-next{
+        width: 23px;
+        height: 40px;
+        margin-top: -44px;
+    }
+
+    .upcomin-event-slider.owl-carousel .owl-nav .owl-prev{
+        left: -46px;
+    }
+
+    .upcomin-event-slider.owl-carousel .owl-nav .owl-next{
+        right: -46px;
+    }
+
+    .main-section-header{
+        row-gap: 80px;
+        padding: 35px 0 20px;
+    }
+
+    .categories-wrpper{
+        padding: 100px 0;
+    }
+
+    .main-section-title{
+        font-size: 60px;
+    }
+
+    .about-info-sec{
+        font-size: 26px;
+        max-width: 70%;
+    }
+
+    .btm-style:before{
+        width: 100px;
+        height: 8px;
+        bottom: -40px;
+    }
+
+    .categories-wrpper{
+        row-gap: 90px;
+    }
+
+    .top-category-section,
+    .bottom-category-section{
+        gap: 40px;
+    }
+
+    .category-name{
+        font-size: 30px;
+    }
 }
 
 @media (max-width: 1199px){
@@ -471,6 +638,91 @@
 
     .section-header{
         margin-bottom: 30px;
+    }
+
+    .section-title{
+        font-size: 26px;
+    }
+
+    .cmn-lft-style{
+        padding-left: 18px;
+    }
+
+    .cmn-lft-style:before{
+        width: 8px;
+    }
+
+    .cmn-link-btn{
+        column-gap: 10px;
+    }
+
+    .plus-icon{
+        width: 14px;
+        height: 14px;
+    }
+
+    .event-title{
+        font-size: 20px;
+    }
+
+    .event-date{
+        font-size: 16px;
+    }
+
+    .event-country{
+        font-size: 18px;
+    }
+
+    .upcomin-event-slider.owl-carousel .owl-nav .owl-prev,
+    .upcomin-event-slider.owl-carousel .owl-nav .owl-next{
+        width: 14px;
+        height: 26px;
+        margin-top: -35px;
+    }
+
+    .upcomin-event-slider.owl-carousel .owl-nav .owl-prev{
+        left: -22px;
+    }
+
+    .upcomin-event-slider.owl-carousel .owl-nav .owl-next{
+        right: -22px;
+    }
+
+    .main-section-title{
+        font-size: 36px;
+    }
+
+    .about-info-sec{
+        font-size: 18px;
+        max-width: 90%;
+    }
+
+    .main-section-header {
+        row-gap: 60px;
+        padding: 35px 0 20px;
+    }
+
+    .categories-wrpper{
+        padding: 55px 0;
+    }
+
+    .btm-style:before{
+        width: 65px;
+        height: 4px;
+        bottom: -33px;
+    }
+
+    .categories-wrpper{
+        row-gap: 55px;
+    }
+
+    .top-category-section,
+    .bottom-category-section{
+        gap: 25px;
+    }
+
+    .category-name{
+        font-size: 20px;
     }
 }
 
@@ -601,6 +853,51 @@
     .banner-btn{
         min-width: 140px;
     }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .cmn-lft-style {
+        padding-left: 14px;
+    }
+
+    .cmn-lft-style:before {
+        width: 6px;
+    }
+
+    .cmn-padding {
+        padding: 45px 0;
+    }
+
+    .main-section-title{
+        font-size: 32px;
+    }
+
+    .about-info-sec{
+        max-width: 100%;
+    }
+
+    .categories-wrpper{
+        padding: 45px 0;
+        row-gap: 40px;
+    }
+
+    .top-category-section, .bottom-category-section {
+        gap: 15px;
+    }
+
+    .catergory-links{
+        row-gap: 14px;
+    }
+
+    .category-name {
+        font-size: 18px;
+    }
+
+    .category-name.cmn-lft-style:before{
+        height: calc(100% - 10px);
+    }
 }
 
 @media (max-width: 767px){
@@ -665,7 +962,66 @@
     }
 
     .section-header{
-        margin-bottom: 30px;
+        margin-bottom: 25px;
+    }
+
+    .section-title {
+        font-size: 22px;
+    }
+
+    .cmn-lft-style {
+        padding-left: 12px;
+    }
+
+    .upcomin-event-slider.owl-carousel .item a{
+        row-gap: 10px;
+    }
+
+    .event-title{
+        font-size: 18px;
+    }
+
+    .event-date{
+        font-size: 14px;
+    }
+
+    .event-country{
+        font-size: 16px;
+    }
+
+    .upcomin-event-slider.owl-carousel .owl-nav .owl-prev, 
+    .upcomin-event-slider.owl-carousel .owl-nav .owl-next{
+        width: 12px;
+        height: 22px;
+        margin-top: -31px;
+    }
+
+    .main-section-header {
+        row-gap: 45px;
+        padding: 30px 0 15px;
+    }
+
+    .main-section-title {
+        font-size: 28px;
+    }
+
+    .btm-style:before {
+        width: 50px;
+        height: 4px;
+        bottom: -24px;
+    }
+
+    .about-info-sec {
+        font-size: 16px;
+    }
+
+    .categories-wrpper {
+        padding: 35px 0;
+        row-gap: 30px;
+    }
+
+    .catergory-links {
+        row-gap: 10px;
     }
 }
 
@@ -725,11 +1081,84 @@
     }
 
     .cmn-padding{
-        padding: 45px 0;
+        padding: 35px 0;
     }
 
     .section-header{
         margin-bottom: 20px;
+    }
+
+    .upcoming-events-section{
+        position: relative;
+        padding-bottom: 60px;
+    }
+
+    .upcomin-event-slider{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .cmn-link-btn{
+        position: absolute;
+        bottom: 20px;
+        font-size: 14px;
+        column-gap: 7px;
+    }
+
+    .upcomin-event-slider.owl-carousel .owl-nav .owl-prev, .upcomin-event-slider.owl-carousel .owl-nav .owl-next{
+        margin-top: -28px;
+    }
+
+    .upcomin-event-slider.owl-carousel .owl-nav .owl-prev {
+        left: -5px;
+    }
+
+    .upcomin-event-slider.owl-carousel .owl-nav .owl-next {
+        right: -5px;
+    }
+
+    .plus-icon {
+        width: 12px;
+        height: 12px;
+    }
+
+    .event-title {
+        font-size: 16px;
+    }
+
+    .event-date {
+        font-size: 13px;
+    }
+
+    .event-country {
+        font-size: 15px;
+    }
+
+    .section-title {
+        font-size: 20px;
+    }
+
+    .main-section-header{
+        padding: 30px 0 0px;
+    }
+
+    .cmn-lft-style:before {
+        width: 4px;
+        height: calc(100% - 10px);
+    }
+
+    .main-section-title {
+        font-size: 26px;
+    }
+
+    .categories-wrpper {
+        padding: 30px 0;
+        row-gap: 25px;
+    }
+
+    .top-category-section, .bottom-category-section{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 25px;
     }
 }
 
@@ -824,7 +1253,42 @@
         font-size: 20px;
     }
 
-    .cmn-padding{
-        padding: 40px 0;
+    .section-header {
+        margin-bottom: 15px;
+    }
+
+    .main-section-title {
+        font-size: 20px;
+    }
+
+    .main-section-header{
+        row-gap: 40px;
+    }
+
+    .btm-style:before {
+        width: 45px;
+        height: 3px;
+        bottom: -22px;
+    }
+
+    .about-info-sec {
+        font-size: 14px;
+    }
+
+    .categories-wrpper {
+        padding: 20px 0;
+        row-gap: 20px;
+    }
+
+    .top-category-section, .bottom-category-section{
+        gap: 20px;
+    }
+
+    .catergory-links {
+        row-gap: 8px;
+    }
+
+    .category-name {
+        font-size: 16px;
     }
 }

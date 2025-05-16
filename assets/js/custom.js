@@ -16,21 +16,35 @@ $(document).ready(function() {
     //upcoming events
     $('.upcomin-event-slider').owlCarousel({
         loop: true,
-        margin: 40,
-        items: 3,
+        items: 1,
         autoplay: false,
         nav: true,
+        navText: [
+            '<span class="arrow-left"></span>',
+            '<span class="arrow-right"></span>',
+        ],
         dots: false,
         responsiveClass:true,
         responsive:{
-            0:{
-                items:1,
+            480:{
+                items:2,
+                margin: 15,
+                nav: true,
             },
-            600:{
+            992:{
                 items:3,
+                margin: 20,
+                nav: true,
             },
             1200:{
                 items:3,
+                margin: 30,
+                nav: true,
+            },
+            1600:{
+                items:3,
+                margin: 40,
+                nav: true,
             }
         }
     })
