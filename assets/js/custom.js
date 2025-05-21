@@ -93,4 +93,49 @@ $(document).ready(function() {
         location.reload();
         });
     });
+
+
+    // Category slider
+    $('.category-slider').owlCarousel({
+        loop: false,
+        items: 1,
+        autoplay: false,
+        margin: 10,
+        autoWidth:true,
+        center: true,
+        nav: true,
+        navText: [
+            '<span class="arrow-left"></span>',
+            '<span class="arrow-right"></span>',
+        ],
+        dots: false,
+        responsiveClass:true,
+        responsive:{
+            480:{
+                items:1,
+                margin: 20,
+                nav: true,
+            },
+            767:{
+                items:2,
+                margin: 20,
+                nav: true,
+            },
+            992:{
+                items:2,
+                margin: 25,
+                nav: true,
+            },
+            1200:{
+                items:3,
+                margin: 40,
+                nav: true,
+            },
+            1600:{
+                items:4,
+                margin: 60,
+                nav: true,
+            }
+        }
+    })
 });
