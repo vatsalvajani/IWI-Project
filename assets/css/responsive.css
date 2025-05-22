@@ -1,3 +1,13 @@
+@media (min-width: 576px){
+    .mobile-filter-btn{
+        display: none;
+    }
+
+    .category-filter-collapse{
+        display: inline-flex !important;
+    }
+}
+
 @media (min-width: 992px){
     .header-navbar{
         padding: 10px 0;
@@ -76,14 +86,6 @@
 
     .accordion-trigger::after {
         display: none !important;
-    }
-
-    .mobile-filter-btn{
-        display: none;
-    }
-
-    .category-filter-collapse{
-        display: inline-flex !important;
     }
 }
 
@@ -1151,6 +1153,100 @@
     .category-slider .category-slider-img-wrap{
         height: 180px;
     }
+
+    .product-listing-wrap{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .product-header{
+        row-gap: 6px;
+    }
+
+    .product-name{
+        font-size: 16px;
+    }
+
+    .product-spec{
+        font-size: 14px;
+    }
+
+    .product-cate-filter{
+        column-gap: 30px;
+        padding: 65px 0;
+    }
+
+    .product-filter-accordion{
+        max-width: 240px;
+    }
+
+    .product-listing-wrap{
+        width: calc(100% - 270px);
+        row-gap: 50px;
+        column-gap: 30px;
+    }
+
+    .product-redirect-btn{
+        margin-bottom: 10px;
+    }
+
+    .product-image-wrap{
+        width: 200px;
+        height: 105px;
+        margin: 30px 0 40px;
+    }
+
+    .cmn-view-btn{
+        font-size: 13px;
+    }
+
+    .view-product-btn{
+        padding: 0 16px 0 0;
+    }
+
+    .cmn-view-btn:hover:before{
+        width: 15px;
+        height: 11px;
+    }
+
+    .cmn-view-btn:hover{
+        padding-left: 16px;
+    }
+
+    .view-product-btn.cmn-view-btn:hover{
+        padding: 0 0 0 16px;
+    }
+
+    .category-filter-collapse .accordion-item .accordion-header .accordion-button{
+        font-size: 16px;
+    }
+
+    .category-filter-collapse .accordion-item .accordion-header .accordion-button, 
+    .category-filter-collapse .accordion-item:first-of-type>.accordion-header .accordion-button{
+        padding: 12px 0;
+    }
+
+    .category-filter-collapse .accordion-button::after{
+        width: 12px;
+        height: 12px;
+    }
+
+    .category-filter-collapse .form-check-label{
+        font-size: 14px;
+        padding-left: 26px;
+    }
+
+    .category-filter-collapse .checkmark{
+        width: 14px;
+        height: 14px;
+    }
+
+    .category-filter-collapse .accordion-item .accordion-body{
+        padding: 0 0 14px 0;
+    }
+
+    .category-filter-collapse .accordion-body form{
+        row-gap: 12px;
+    }
 }
 
 @media (max-width: 991px){
@@ -1439,8 +1535,13 @@
         height: 150px;
     }
 
-    .mobile-filter-btn{
-        display: inline-flex;
+    .product-listing-wrap{
+        grid-template-columns: repeat(2, 1fr);
+        width: calc(100% - 250px);
+    }
+
+    .product-filter-accordion {
+        max-width: 220px;
     }
 }
 
@@ -1584,6 +1685,58 @@
 
     .newsletter-text {
         font-size: 14px;
+    }
+
+    .product-cate-filter{
+        padding: 50px 0;
+        column-gap: 20px;
+    }
+
+    .product-filter-accordion {
+        max-width: 170px;
+    }
+
+    .product-listing-wrap{
+        width: calc(100% - 190px);
+        row-gap: 35px;
+        column-gap: 15px;
+    }
+
+    .category-filter-collapse .accordion-item .accordion-header .accordion-button {
+        font-size: 14px;
+    }
+
+    .category-filter-collapse .accordion-item .accordion-header .accordion-button, 
+    .category-filter-collapse .accordion-item:first-of-type>.accordion-header .accordion-button {
+        padding: 10px 0;
+    }
+
+    .category-filter-collapse .accordion-button::after {
+        width: 10px;
+        height: 10px;
+    }
+
+    .product-name {
+        font-size: 14px;
+    }
+
+    .product-spec {
+        font-size: 13px;
+    }
+
+    .product-image-wrap{
+        margin: 20px 0 30px;
+        width: 170px;
+        height: 88px;
+    }
+
+    .product-redirect-btn{
+        flex-direction: column;
+        row-gap: 6px;
+    }
+
+    .view-product-btn{
+        padding: 0 0px 0 0;
     }
 }
 
@@ -1801,6 +1954,76 @@
         padding-left: 15px;
         padding-right: 15px;
     }
+
+    .mobile-filter-btn{
+        display: flex;
+    }
+
+    .product-cate-filter{
+        flex-direction: column;
+        padding: 40px 0;
+        column-gap: 0;
+        row-gap: 25px;
+    }
+
+    .product-filter-accordion{
+        max-width: 100%;
+        box-shadow: 0px 0px 10px #8f8f8f45;
+    }
+
+    .product-listing-wrap{
+        width: 100%;        
+    }
+
+    .btn.filter-btn{
+        background-color: #A12933;
+        padding: 6px 12px;
+        border-radius: 0px;
+        border: 0;
+        color: #fff;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .btn.filter-btn svg{
+        width: 20px;
+        height: 18px;
+    }
+
+    .btn.filter-btn:hover,
+    .btn.filter-btn:active{
+        background-color: #000;
+        color: #fff;
+    }
+
+    .category-filter-collapse{
+        padding: 10px 10px 20px;
+    }
+
+    .product-redirect-btn{
+        flex-direction: row;
+    }
+
+    .view-product-btn {
+        padding: 0 12px 0 0;
+    }
+
+    .cmn-view-btn:hover:before {
+        width: 14px;
+        height: 9px;
+    }
+
+    .cmn-view-btn:hover {
+        padding-left: 12px;
+    }
+
+    .view-product-btn.cmn-view-btn:hover {
+        padding: 0 0 0 12px;
+    }
 }
 
 @media (max-width: 479px){
@@ -1852,6 +2075,19 @@
 
     .category-slider .category-slider-img-wrap {
         height: 117px;
+    }
+
+    .btn.filter-btn{
+        font-size: 16px;
+    }
+
+    .btn.filter-btn svg {
+        width: 18px;
+        height: 16px;
+    }
+
+    .cmn-view-btn {
+        font-size: 12px;
     }
 }
 
@@ -1968,5 +2204,33 @@
 
     .category-slider .category-slider-img-wrap {
         height: 98px;
+    }
+
+    .product-cate-filter{
+        padding: 30px 0;
+    }
+
+    .btn.filter-btn {
+        font-size: 14px;
+    }
+
+    .product-listing-wrap{
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 25px;
+    }
+
+    .btn.filter-btn svg {
+        width: 16px;
+        height: 14px;
+    }
+
+    .category-filter-collapse .checkmark {
+        width: 12px;
+        height: 12px;
+    }
+
+    .category-filter-collapse .form-check-label {
+        font-size: 13px;
+        padding-left: 20px;
     }
 }
