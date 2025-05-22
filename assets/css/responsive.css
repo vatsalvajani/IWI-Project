@@ -403,7 +403,7 @@
     }
 
     .page-breadcrumb{
-        margin-bottom: 50px;
+        margin-bottom: 40px;
     }
 
     .category-slider .item{
@@ -502,6 +502,19 @@
 
     .category-filter-collapse .accordion-item .accordion-body{
         padding: 0 0 14px 0;
+    }
+
+    .inner-category-title{
+        font-size: 48px;
+    }
+
+    .inner-category-page .product-cate-filter{
+        padding: 45px 0;
+    }
+
+    .product-description{
+        margin-bottom: 25px;
+        font-size: 16px;
     }
 }
 
@@ -866,6 +879,19 @@
     .category-filter-collapse .accordion-item .accordion-body{
         padding: 0 0 16px 0;
     }
+
+    .inner-category-title{
+        font-size: 70px;
+    }
+
+    .inner-category-page .product-cate-filter{
+        padding: 60px 0;
+    }
+
+    .product-description{
+        margin-bottom: 40px;
+        font-size: 16px;
+    }
 }
 
 @media (max-width: 1199px){
@@ -1143,7 +1169,7 @@
     }
 
     .page-breadcrumb{
-        margin-bottom: 50px;
+        margin-bottom: 40px;
     }
 
     .category-slider .item{
@@ -1246,6 +1272,23 @@
 
     .category-filter-collapse .accordion-body form{
         row-gap: 12px;
+    }
+
+    .inner-category-title{
+        font-size: 42px;
+    }
+
+    .inner-category-title{
+        font-size: 42px;
+    }
+
+    .inner-category-page .product-cate-filter{
+        padding: 40px 0;
+    }
+
+    .product-description{
+        margin-bottom: 20px;
+        font-size: 15px;
     }
 }
 
@@ -1543,6 +1586,15 @@
     .product-filter-accordion {
         max-width: 220px;
     }
+
+    .inner-category-title {
+        font-size: 36px;
+    }
+
+    .product-description{
+        margin-bottom: 15px;
+        font-size: 14px;
+    }
 }
 
 @media (max-width: 767px){
@@ -1737,6 +1789,14 @@
 
     .view-product-btn{
         padding: 0 0px 0 0;
+    }
+
+    .inner-category-title {
+        font-size: 32px;
+    }
+
+    .inner-category-page .product-cate-filter {
+        padding: 30px 0;
     }
 }
 
@@ -2024,6 +2084,18 @@
     .view-product-btn.cmn-view-btn:hover {
         padding: 0 0 0 12px;
     }
+
+    .inner-category-title {
+        font-size: 28px;
+    }
+
+    .inner-category-page .product-cate-filter {
+        padding: 25px 0;
+    }
+
+    .product-description{
+        font-size: 13px;
+    }
 }
 
 @media (max-width: 479px){
@@ -2232,5 +2304,9 @@
     .category-filter-collapse .form-check-label {
         font-size: 13px;
         padding-left: 20px;
+    }
+
+    .inner-category-title {
+        font-size: 26px;
     }
 }
