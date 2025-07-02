@@ -521,6 +521,7 @@
     .product-description{
         margin-bottom: 25px;
         font-size: 16px;
+        max-width: 210px;
     }
 
     .sub-inner-banner{
@@ -603,13 +604,17 @@
         margin-bottom: 50px;
     }
 
+    .technical-data-header label{
+        font-size: 20px;
+    }
+
     .cmn-table-cls thead tr th{
-        padding: 14px 6px;
+        padding: 14px 22px;
         font-size: 20px;
     }
 
     .cmn-table-cls tbody tr td{
-        padding: 20px 6px;
+        padding: 20px 22px;
         font-size: 18px;
     }
 
@@ -684,6 +689,9 @@
         width: calc(100% - 160px);
     }
 
+    .main-web-menu .navbar-nav>li .search-link{
+        column-gap: 10px;
+    }
 }
 
 @media (min-width: 1601px){
@@ -1139,12 +1147,12 @@
     }
 
     .cmn-table-cls thead tr th{
-        padding: 16px 6px;
+        padding: 16px 28px;
         font-size: 22px;
     }
 
     .cmn-table-cls tbody tr td{
-        padding: 24px 6px;
+        padding: 24px 28px;
         font-size: 20px;
     }
 
@@ -1196,6 +1204,14 @@
 
     .cmn-lft-style:before{
         height: 28px;
+    }
+
+    .product-description{
+        max-width: 276px;
+    }
+
+    .technical-data-header label{
+        font-size: 22px;
     }
 }
 
@@ -1675,12 +1691,12 @@
     }
 
     .cmn-table-cls thead tr th{
-        padding: 14px 6px;
+        padding: 14px 18px;
         font-size: 18px;
     }
 
     .cmn-table-cls tbody tr td{
-        padding: 20px 6px;
+        padding: 20px 18px;
         font-size: 16px;
     }
 
@@ -1766,6 +1782,10 @@
 
     .search-content-description{
         width: calc(100% - 140px);
+    }
+
+    .technical-data-header label{
+        font-size: 20px;
     }
 }
 
@@ -2179,12 +2199,13 @@
     }
 
     .cmn-table-cls thead tr th{
+        padding: 14px;
         font-size: 16px;
         min-width: 120px;
     }
 
     .cmn-table-cls tbody tr td{
-        padding: 16px 6px;
+        padding: 16px 14px;
         font-size: 14px;
     }
 
@@ -2274,6 +2295,10 @@
     .rtl .search-title-link:hover{
         padding-left: 0px;
         padding-right: 36px;
+    }
+
+    .technical-data-header label{
+        font-size: 18px;
     }
 }
 
@@ -2905,6 +2930,7 @@
     .cmn-table-cls thead tr th{
         font-size: 15px;
         padding: 12px 6px;
+        min-width: 100px;
     }
 
     .cmn-table-cls tbody tr td {
@@ -2982,6 +3008,10 @@
 
     .search-content-description{
         width: calc(100% - 112px);
+    }
+
+    .technical-data-header label{
+        font-size: 16px;
     }
 }
 
