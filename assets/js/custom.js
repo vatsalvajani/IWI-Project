@@ -193,85 +193,82 @@ $(document).ready(function() {
     });
 
     //scroll to section 
-        const $header = $('.header-navbar');
+    const $header = $('.header-navbar');
     const $bar = $('.inter-section-redirection');
-    let barOffsetTop = $bar.offset().top;
 
-    function getHeaderHeight() {
-        return $header.outerHeight() || 0;
-    }
 
-    function updateBarOffset() {
-        barOffsetTop = $bar.offset().top;
-    }
+    if ($header.length && $bar.length) {
+        let barOffsetTop = $bar.offset().top;
 
-    function handleScroll() {
-        const scrollTop = $(window).scrollTop();
-        const headerHeight = getHeaderHeight();
-
-        // Apply fixed class immediately when reaching the bar
-        if (scrollTop >= barOffsetTop - headerHeight) {
-            $bar.addClass('fixed');
-        } else {
-            $bar.removeClass('fixed');
+        function getHeaderHeight() {
+            return $header.outerHeight() || 0;
         }
 
-        // Scroll spy active class logic
-        const scrollPos = scrollTop + headerHeight + $bar.outerHeight() + 1;
-        let foundActive = false;
+        function updateBarOffset() {
+            barOffsetTop = $bar.offset().top;
+        }
 
-        $('.intersection-redirect').each(function () {
-            const sectionId = $(this).attr('href');
-            const $section = $(sectionId);
+        function handleScroll() {
+            const scrollTop = $(window).scrollTop();
+            const headerHeight = getHeaderHeight();
 
-            if ($section.length) {
-                const sectionTop = $section.offset().top;
-                const sectionBottom = sectionTop + $section.outerHeight();
+            if (scrollTop >= barOffsetTop - headerHeight) {
+                $bar.addClass('fixed');
+            } else {
+                $bar.removeClass('fixed');
+            }
 
-                if (scrollPos >= sectionTop && scrollPos < sectionBottom) {
-                    $('.intersection-redirect').removeClass('active');
-                    $(this).addClass('active');
-                    foundActive = true;
+            const scrollPos = scrollTop + headerHeight + $bar.outerHeight() + 1;
+            let foundActive = false;
+
+            $('.intersection-redirect').each(function () {
+                const sectionId = $(this).attr('href');
+                const $section = $(sectionId);
+
+                if ($section.length) {
+                    const sectionTop = $section.offset().top;
+                    const sectionBottom = sectionTop + $section.outerHeight();
+
+                    if (scrollPos >= sectionTop && scrollPos < sectionBottom) {
+                        $('.intersection-redirect').removeClass('active');
+                        $(this).addClass('active');
+                        foundActive = true;
+                    }
                 }
+            });
+
+            if (!foundActive) {
+                $('.intersection-redirect').removeClass('active');
+            }
+        }
+
+        $('.intersection-redirect').on('click', function (e) {
+            e.preventDefault();
+            const targetId = $(this).attr('href');
+            const $target = $(targetId);
+
+            if ($target.length) {
+                const totalOffset = getHeaderHeight() + ($bar.hasClass('fixed') ? $bar.outerHeight() : 0);
+                const scrollTo = $target.offset().top - totalOffset;
+
+                $('html, body').animate({
+                    scrollTop: scrollTo
+                }, 500);
             }
         });
 
-        // If no section is active, remove all active classes
-        if (!foundActive) {
-            $('.intersection-redirect').removeClass('active');
-        }
+        $(window).on('scroll', handleScroll);
+
+        $(window).on('resize', function () {
+            updateBarOffset();
+            handleScroll();
+        });
+
+        $(window).on('load', function () {
+            updateBarOffset();
+            handleScroll();
+        });
     }
-
-    // Smooth scroll on click
-    $('.intersection-redirect').on('click', function (e) {
-        e.preventDefault();
-        const targetId = $(this).attr('href');
-        const $target = $(targetId);
-
-        if ($target.length) {
-            const totalOffset = getHeaderHeight() + ($bar.hasClass('fixed') ? $bar.outerHeight() : 0);
-            const scrollTo = $target.offset().top - totalOffset;
-
-            $('html, body').animate({
-                scrollTop: scrollTo
-            }, 500);
-        }
-    });
-
-    // On scroll
-    $(window).on('scroll', handleScroll);
-
-    // On resize, update offset and re-check scroll position
-    $(window).on('resize', function () {
-        updateBarOffset();
-        handleScroll();
-    });
-
-    // Recalculate offset on load too (important if images are above the bar)
-    $(window).on('load', function () {
-        updateBarOffset();
-        handleScroll();
-    });
 
     //product slider
     var main = $(".main-carousel");
@@ -328,5 +325,40 @@ $(document).ready(function() {
 
     $(".thumb-next").click(function () {
         thumbs.trigger("next.owl.carousel");
+    });
+
+    //search autocomplete
+    const searchSuggestions = [
+      "Masada",
+      "Masada Slim",
+      "TMG",
+      "Pistol",
+      "Sniper",
+      "Firearms",
+      "Assault Rifels",
+      "GL",
+    ];
+
+    // Initialize jQuery UI Autocomplete
+    $("#searchInput").autocomplete({
+      source: searchSuggestions,
+      minLength: 1
+    });
+
+    // Open search overlay
+    $("#openSearchBtn").on("click", function () {
+      $("#searchOverlay").fadeIn();
+      setTimeout(() => $("#searchInput").focus(), 300);
+    });
+
+    // Close overlay on close button or ESC key
+    $("#closeSearchBtn").on("click", function () {
+      $("#searchOverlay").fadeOut();
+    });
+
+    $(document).on("keydown", function (e) {
+      if (e.key === "Escape") {
+        $("#searchOverlay").fadeOut();
+      }
     });
 });
