@@ -7,6 +7,7 @@
 
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/jquery-ui.css" rel="stylesheet">
     <link href="assets/css/select2.min.css" rel="stylesheet" />
     <link href="assets/css/owl.carousel.css" rel="stylesheet" />
     <link href="assets/css/style.css" rel="stylesheet">
@@ -65,6 +66,12 @@
                       <li class="nav-item">
                         <a class="nav-link" href="#">about</a>
                       </li>
+                      <li class="nav-item">
+                        <button id="openSearchBtn" class="search-link nav-link">
+                          Search
+                          <img class="search-icon" src="../assets/images/search-icon.svg"/>
+                        </button>
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -109,6 +116,16 @@
             </div>
           </div>
         </nav>
+        <div id="searchOverlay" class="search-overlay">
+          <div class="search-close-btn" id="closeSearchBtn">            
+            <svg viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19.6667 0.666687C9.19768 0.666687 0.666679 9.19769 0.666679 19.6667C0.666679 30.1357 9.19768 38.6667 19.6667 38.6667C30.1357 38.6667 38.6667 30.1357 38.6667 19.6667C38.6667 9.19769 30.1357 0.666687 19.6667 0.666687ZM26.0507 24.0367C26.6017 24.5877 26.6017 25.4997 26.0507 26.0507C25.7657 26.3357 25.4047 26.4687 25.0437 26.4687C24.6827 26.4687 24.3217 26.3357 24.0367 26.0507L19.6667 21.6807L15.2967 26.0507C15.0117 26.3357 14.6507 26.4687 14.2897 26.4687C13.9287 26.4687 13.5677 26.3357 13.2827 26.0507C12.7317 25.4997 12.7317 24.5877 13.2827 24.0367L17.6527 19.6667L13.2827 15.2967C12.7317 14.7457 12.7317 13.8337 13.2827 13.2827C13.8337 12.7317 14.7457 12.7317 15.2967 13.2827L19.6667 17.6527L24.0367 13.2827C24.5877 12.7317 25.4997 12.7317 26.0507 13.2827C26.6017 13.8337 26.6017 14.7457 26.0507 15.2967L21.6807 19.6667L26.0507 24.0367Z" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="search-input-wrapper">
+            <input type="text" id="searchInput" class="form-control" placeholder="Search for Arms..." autocomplete="off"/>
+          </div>
+        </div>
       </header>
 
       <div class="main-content-wrapper">
@@ -673,6 +690,7 @@
     </div>
 
     <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/jquery-ui.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/select2.min.js"></script>
     <script src="assets/js/owl.carousel.js"></script>
