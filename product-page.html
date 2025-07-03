@@ -219,8 +219,13 @@
                       <div class="item">
                         <img src="assets/images/event-1.png" alt="product-main-img">
                       </div>
-                      <div class="item">
-                        <img src="assets/images/event-2.png" alt="product-main-img">
+                      <div class="item video-slide" id="ProductvideoSlide">
+                        <div class="video-main-wrapper">
+                          <img src="assets/images/event-2.png" alt="video thumbnail" class="img-fluid" />
+                          <span class="play-button">
+                            <img src="assets/images/play-icon.svg" alt="play video" width="48" height="48" />
+                          </span>
+                        </div>
                       </div>
                       <div class="item">
                         <img src="assets/images/event-3.png" alt="product-main-img">
@@ -240,7 +245,12 @@
                           <img src="assets/images/event-1.png" alt="product-main-img">
                         </div>
                         <div class="item">
-                          <img src="assets/images/event-2.png" alt="product-main-img">
+                          <div class="video-slider">
+                            <img src="assets/images/event-2.png" alt="video thumbnail" class="img-fluid" />
+                            <span class="play-button">
+                              <img src="assets/images/play-icon.svg" alt="play video" width="24" height="24" />
+                            </span>
+                          </div>
                         </div>
                         <div class="item">
                           <img src="assets/images/event-3.png" alt="product-main-img">
@@ -335,7 +345,7 @@
               </div>
               <div class="technical-data-wrapper">
                 <div class="technical-data-header">
-                  <label>Choose Modal</label>
+                  <label>Choose Model</label>
                   <div class="modal-select">
                     <select class="modal-select-dropdown">
                       <option value="option1">Masada</option>
@@ -458,6 +468,32 @@
               </div>
             </div>
 
+          </div>
+        </div>
+      </div>
+
+      <div class="cmn-modal-popup product-modal-popup modal fade" id="Productmodal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+              <!-- Close Button -->
+              <button type="button" class="popup-btn-close" data-bs-dismiss="modal" aria-label="Close">
+                <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path class="light-bg" fill-rule="evenodd" clip-rule="evenodd" d="M0.666679 20.6667C0.666679 9.62099 9.62099 0.666687 20.6667 0.666687C31.7124 0.666687 40.6667 9.62099 40.6667 20.6667C40.6667 31.7125 31.7124 40.6667 20.6667 40.6667C9.62099 40.6667 0.666679 31.7125 0.666679 20.6667Z" fill="currentColor"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M14.0986 14.0986C14.6436 13.5537 15.527 13.5537 16.0719 14.0986L27.2347 25.2615C27.7796 25.8064 27.7796 26.6897 27.2347 27.2347C26.6897 27.7796 25.8062 27.7796 25.2613 27.2347L14.0986 16.0719C13.5537 15.527 13.5537 14.6435 14.0986 14.0986Z" fill="currentColor"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M27.2347 14.0986C27.7796 14.6436 27.7796 15.527 27.2347 16.0719L16.0719 27.2347C15.527 27.7796 14.6435 27.7796 14.0986 27.2347C13.5537 26.6897 13.5537 25.8062 14.0986 25.2613L25.2615 14.0986C25.8064 13.5537 26.6897 13.5537 27.2347 14.0986Z" fill="currentColor"/>
+                </svg>
+              </button>
+
+              <!-- Responsive 16:9 Video -->
+              <div class="ratio ratio-16x9">
+                <video id="categoryVideo" autoplay="true" loop controls autoplay muted playsinline preload="metadata"
+                  poster="assets/images/event-2.png">
+                  <source src="assets/images/sample-video.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
           </div>
         </div>
       </div>
