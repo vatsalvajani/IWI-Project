@@ -501,10 +501,43 @@ h1,h2,h3,h4,h5,h6{
 	display: flex;
 	flex-direction: column;
 	row-gap: 18px;
+	position: relative;
 }
 
 .category-img-wrap{
 	overflow: hidden;
+	position: relative;
+}
+
+.catergory-links[data-bs-toggle="modal"] .category-img-wrap::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* semi-transparent overlay */
+  z-index: 1;
+}
+
+.play-button{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	z-index: 2;
+	width: 50px;
+    height: 50px;
+}
+
+.thumb-carousel-wrapper .play-button{
+	width: 20px;
+    height: 20px;
+}
+
+.play-button img{
+	width: 100%;
+	height: 100%;
 }
 
 .catergory-links .category-image{
@@ -1016,7 +1049,7 @@ h1,h2,h3,h4,h5,h6{
 
 .item-overview-wrapper{
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
 	justify-content: space-between;
 	column-gap: 30px;
 	padding: 10px;
@@ -1042,6 +1075,7 @@ h1,h2,h3,h4,h5,h6{
 .overview-content{
 	display: flex;
 	flex-direction: column;
+	align-items: flex-start;
 	row-gap: 10px;
 	font-weight: 300;
 	line-height: 1.4;
@@ -1051,6 +1085,8 @@ h1,h2,h3,h4,h5,h6{
 	display: flex;
 	flex-direction: column;
 	row-gap: 10px;
+	overflow: hidden;
+  	transition: max-height 0.4s ease;
 }
 
 .overview-image-wrapper img{
@@ -1289,7 +1325,7 @@ h1,h2,h3,h4,h5,h6{
     display: flex;
     align-items: center;
     justify-content: flex-start;
-	margin-top: auto;
+	margin-top: 60px;
 }
 
 .product-overview-spec{
@@ -1447,6 +1483,73 @@ h1,h2,h3,h4,h5,h6{
 	text-overflow: ellipsis;
 	font-weight: 300;
 	line-height: 1.4;
+}
+
+.cmn-modal-popup{
+    z-index: 99999;
+}
+
+.cmn-modal-popup .modal-dialog{
+	max-width: 768px;
+}
+
+.cmn-modal-popup .modal-content .popup-btn-close{
+    position: absolute;
+    right: -18px;
+    top: -18px;
+    padding: 0;
+    border: 0;
+    width: 36px;
+    height: 36px;
+    background-color: transparent;
+	color: rgb(255 255 255);
+	z-index: 1;
+}
+
+.cmn-modal-popup .modal-content .popup-btn-close .light-bg{
+	color: rgba(161, 41, 51, 1);
+}
+
+.cmn-modal-popup .modal-content .popup-btn-close svg{
+	width: 100%;
+	height: 100%;
+}
+
+.cmn-modal-popup .modal-body{
+	padding: 0px;
+}
+
+.modal-backdrop{
+	--bs-backdrop-opacity: 0.7;
+    z-index: 9999;
+}
+
+.video-wrapper{
+	position: relative;
+}
+
+.video-slider{
+	height: 100%;
+	position: relative;
+}
+
+.video-main-wrapper{
+	position: relative;
+	height: 100%;
+	cursor: pointer;
+}
+
+.read-more-toggle{
+    background-color: #A12933;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+    border: 0;
+    border-radius: 0;
+    padding: 4px 12px;
+}
+
+.read-more-toggle:hover{
+	background-color: #1E1E20;
 }
 
 /* search autocomplete */

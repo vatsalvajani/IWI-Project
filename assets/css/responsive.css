@@ -1725,6 +1725,7 @@
         flex-direction: column;
         row-gap: 10px;
         align-items: flex-start;
+        margin-top: 20px;
     }
 
     .product-spec-label{
@@ -1786,6 +1787,15 @@
 
     .technical-data-header label{
         font-size: 20px;
+    }
+
+    .play-button{
+        width: 40px;
+        height: 40px;
+    }
+
+    .read-more-toggle{
+        font-size: 14px;
     }
 }
 
@@ -2300,6 +2310,10 @@
     .technical-data-header label{
         font-size: 18px;
     }
+
+    .cmn-modal-popup .modal-dialog{
+        max-width: 720px;
+    }
 }
 
 @media (max-width: 767px){
@@ -2579,6 +2593,22 @@
     .product-spec-label::before{
         width: 4px;
         height: 14px;
+    }
+
+    .play-button {
+        width: 35px;
+        height: 35px;
+    }
+
+    .cmn-modal-popup .modal-dialog {
+        max-width: 92%;
+    }
+
+    .cmn-modal-popup .modal-content .popup-btn-close{
+        right: -14px;
+        top: -14px;
+        width: 28px;
+        height: 28px;
     }
 }
 
@@ -2960,6 +2990,7 @@
 
     .product-specifications{
         row-gap: 6px;
+        margin-top: 10px;
     }
 
     .product-overview-spec {
@@ -3012,6 +3043,19 @@
 
     .technical-data-header label{
         font-size: 16px;
+    }
+
+    .cmn-modal-popup .modal-dialog{
+        max-width: 92%;
+        margin-top: var(--bs-modal-margin);
+        margin-bottom: var(--bs-modal-margin);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .thumb-carousel-wrapper .play-button{
+        width: 14px;
+        height: 14px;
     }
 }
 
