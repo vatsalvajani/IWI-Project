@@ -361,4 +361,80 @@ $(document).ready(function() {
         $("#searchOverlay").fadeOut();
       }
     });
+
+    //video modal popup js
+    $('#videoModal').on('hidden.bs.modal', function () {
+        var $video = $('#categoryVideo')[0];
+        $video.pause();
+        $video.currentTime = 0;
+    });
+
+    //product categoy popup
+    $('#ProductvideoSlide').on('click', function () {
+      $('#Productmodal').modal('show');
+    });
+
+    // Pause and reset video on modal close
+    $('#ProductvideoSlide').on('click', function () {
+      $('#Productmodal').modal('show');
+    });
+
+    // Pause and reset video on modal close
+    $('#Productmodal').on('hidden.bs.modal', function () {
+      var video = $('#categoryVideo')[0];
+      video.pause();
+      video.currentTime = 0;
+    });
+
+    //read more button on view product and view series
+    function applyReadMoreLogic() {
+        const $content = $('.cmn-sec-overview-content');
+        const $carousel = $('.main-carousel, .overview-image-wrapper');
+
+        // Check if both elements exist
+        if ($content.length && $carousel.length) {
+            // Remove any existing read-more setup
+            $content.removeClass('collapsed expanded').css('max-height', '');
+            $content.next('.read-more-toggle').remove();
+
+            if ($(window).width() > 991) {
+                const contentHeight = $content.outerHeight();
+                const carouselHeight = $carousel.outerHeight();
+
+                if (contentHeight > carouselHeight) {
+                    const collapsedHeight = carouselHeight;
+
+                    // Set max-height and add toggle button
+                    $content
+                    .css('max-height', collapsedHeight)
+                    .addClass('collapsed')
+                    .css('overflow', 'hidden');
+
+                    $content.after('<button class="read-more-toggle">Read More</button>');
+
+                    // Toggle logic
+                    $('.read-more-toggle').on('click', function () {
+                    const isExpanded = $content.hasClass('expanded');
+
+                    if (isExpanded) {
+                        $content.removeClass('expanded').addClass('collapsed').css('max-height', collapsedHeight);
+                        $(this).text('Read More');
+                    } else {
+                        const expandedHeight = $content.get(0).scrollHeight;
+                        $content.removeClass('collapsed').addClass('expanded').css('max-height', expandedHeight + 'px');
+                        $(this).text('Read Less');
+                    }
+                    });
+                }
+            }
+        }
+    }
+
+    $(document).ready(function () {
+        applyReadMoreLogic();
+    });
+
+    $(window).on('resize', function () {
+        applyReadMoreLogic();
+    });
 });
