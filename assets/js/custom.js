@@ -329,37 +329,39 @@ $(document).ready(function() {
 
     //search autocomplete
     const searchSuggestions = [
-      "Masada",
-      "Masada Slim",
-      "TMG",
-      "Pistol",
-      "Sniper",
-      "Firearms",
-      "Assault Rifels",
-      "GL",
+        "Masada", "Masada Slim", "TMG", "Pistol",
+        "Sniper", "Firearms", "Assault Rifles", "GL"
     ];
 
-    // Initialize jQuery UI Autocomplete
-    $("#searchInput").autocomplete({
-      source: searchSuggestions,
-      minLength: 1
-    });
+    $(function () {
+        $("#searchInput").autocomplete({
+        source: searchSuggestions,
+        minLength: 1
+        });
 
-    // Open search overlay
-    $("#openSearchBtn").on("click", function () {
-      $("#searchOverlay").fadeIn();
-      setTimeout(() => $("#searchInput").focus(), 300);
-    });
+        $("#openSearchBtn").on("click", function () {
+            const offcanvas = bootstrap.Offcanvas.getInstance(document.getElementById('offcanvasRight'));
+            if (offcanvas) offcanvas.hide(); // Close offcanvas menu if open
 
-    // Close overlay on close button or ESC key
-    $("#closeSearchBtn").on("click", function () {
-      $("#searchOverlay").fadeOut();
-    });
+            $("#searchOverlay").fadeIn(200, () => {
+                const input = document.getElementById("searchInput");
+                if (/Mobi|Android/i.test(navigator.userAgent)) {
+                setTimeout(() => input.focus(), 400);
+                } else {
+                input.focus();
+                }
+            });
+        });
 
-    $(document).on("keydown", function (e) {
-      if (e.key === "Escape") {
+        $("#closeSearchBtn").on("click", function () {
         $("#searchOverlay").fadeOut();
-      }
+        });
+
+        $(document).on("keydown", function (e) {
+        if (e.key === "Escape") {
+            $("#searchOverlay").fadeOut();
+        }
+        });
     });
 
     //video modal popup js
