@@ -343,6 +343,8 @@ $(document).ready(function() {
             const offcanvas = bootstrap.Offcanvas.getInstance(document.getElementById('offcanvasRight'));
             if (offcanvas) offcanvas.hide(); // Close offcanvas menu if open
 
+            $("body").addClass("search-open"); 
+
             $("#searchOverlay").fadeIn(200, () => {
                 const input = document.getElementById("searchInput");
                 if (/Mobi|Android/i.test(navigator.userAgent)) {
